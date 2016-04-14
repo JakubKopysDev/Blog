@@ -4,5 +4,11 @@
       <h2 class="post_content"><%= truncate(post.content, length: 250, separator: '.', omission: '.')%></h2>
       <h2 class="created_at"><%= post.created_at.strftime("%d %b %Y") %></h2>
       <span class="read_more"><%= link_to 'Read more...', post %></span>
+      <% if logged_in? %>
+        <div class="authorized_links">
+          <span class="edit"><%= link_to 'Edit', edit_post_path(post) %></span>
+          <span class="delete"><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?'} %></span>
+        </div>
+      <% end %>
     </div>
 <% end %>

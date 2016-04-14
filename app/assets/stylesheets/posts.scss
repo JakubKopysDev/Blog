@@ -46,6 +46,22 @@ $pale-orange: #FF8E64;
       }
     }
   }
+  .authorized_links {
+    float: right;
+    span {
+      margin-left: 10px;
+      &.edit {
+        a {
+          color: #074D7F;
+        }
+      }
+      &.delete {
+        a {
+          color: #B00038;
+        }
+      }
+    }
+  }
 }
 .show_post {
   padding: 30px 0 50px 0;

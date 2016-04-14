@@ -1,0 +1,20 @@
+<ul class="links">
+  <li>
+    <%= link_to new_post_path, class: 'link' do%>
+        <%= fa_icon 'plus 2x' %>
+        <span class="label CV">New post</span>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to logout_path, method: :delete do %>
+        <%= fa_icon 'sign-out 2x' %>
+        <span class="label">Sign out</span>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to root_path do %>
+        <%= fa_icon 'question 2x' %>
+        <span class="label">IDK yet</span>
+    <% end %>
+  </li>
+</ul>

@@ -11,6 +11,11 @@
   <div class="side_panel clearfix">
     <%= render 'layouts/panel' %>
   </div>
+  <% if logged_in? %>
+    <div class="controls clearfix">
+      <%= render 'layouts/controls' %>
+    </div>
+  <% end %>
   <div class="content">
     <% flash.each do |key, value| %>
         <%= content_tag :div, value, class: "flash #{key}" %>
