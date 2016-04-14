@@ -1,0 +1,8 @@
+<% @posts.each do |post| %>
+    <div class="post" id="post_#{post.id}">
+      <h1 class="title"><%= link_to "#{post.title}", post %></h1>
+      <h2 class="post_content"><%= truncate(post.content, length: 250, separator: '.', omission: '.')%></h2>
+      <h2 class="created_at"><%= post.created_at.strftime("%d %b %Y") %></h2>
+      <span class="read_more"><%= link_to 'Read more...', post %></span>
+    </div>
+<% end %>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Myblog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+  <div class="side_panel clearfix">
+    <%= render 'layouts/panel' %>
+  </div>
+  <div class="content">
+    <% flash.each do |key, value| %>
+        <%= content_tag :div, value, class: "flash #{key}" %>
+    <% end %>
+    <%= yield %>
+  </div>
+</div>
+</body>
+</html>

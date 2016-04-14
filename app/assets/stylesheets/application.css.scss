@@ -1,0 +1,167 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require font-awesome
+ *= require normalize-rails
+ *= require_self
+ *= require_tree .
+ */
+
+// Color instances
+$dark-orange: #9B2A00;
+$med-orange: #C63600;
+$light-orange: #FF6F39;
+$pale-orange: #FF8E64;
+
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+  margin:0;
+  padding:0;
+}
+html,body {
+  margin:0;
+  padding:0;
+}
+
+
+/* Extra options you might want to consider*/
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+fieldset,img {
+  border:0;
+}
+input{
+  border:1px solid #b0b0b0;
+  padding:3px 5px 4px;
+  color:#979797;
+  width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+  font-style:normal;
+  font-weight:normal;
+}
+ol,ul {
+  list-style:none;
+}
+caption,th {
+  text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:normal;
+}
+q:before,q:after {
+  content:'';
+}
+abbr,acronym {
+  border:0;
+}
+/* THe end of css reset */
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 100%;
+  background-color: lighten(#f8f9f9, 2%);
+  text-shadow: #fff 0px 1px 0px;
+}
+
+.side_panel {
+  padding-top: 200px;
+  color: white;
+  float: left;
+  width: 22%;
+  background: lighten(orangered, 5%);
+  overflow: auto;
+  position: fixed;
+  height: 100%;
+  -webkit-box-shadow: 2px 0px 10px 0px rgba(50, 50, 50, 1);
+  -moz-box-shadow:    2px 0px 10px 0px rgba(50, 50, 50, 1);
+  box-shadow:         2px 0px 10px 0px rgba(50, 50, 50, 1);
+  img.avatar {
+    border-radius: 200px;
+    box-shadow: 0px 0px 15px 3px rgba(50, 50, 50, 1);
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(50, 50, 50, 1);
+    -moz-box-shadow: 0px 0px 15px 3px rgba(50, 50, 50, 1);
+    -o-box-shadow: 0px 0px 15px 3px rgba(50, 50, 50, 1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1.name {
+    padding-top: 15px;
+    text-align: center;
+    color: lighten(#FFBA64, 5%); //darken(white, 5%);// #FFBA64; //3A4A4D
+    font-weight: 600;
+    text-shadow: none;
+  }
+  ul.links {
+    list-style-type: none;
+    padding-top: 25px;
+    text-align: center;
+    li {
+      text-align: center;
+      padding: 25px 30px 20px 30px;
+      margin: 0 10px;
+      display: inline-block;
+      border-radius: 10px;
+      span.label {
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: lighten(#FFBA64, 5%);
+        text-shadow: none;
+      }
+      &:hover {
+        background: lighten(#FFBA64, 5%);
+        i, span{
+          color: orangered;
+        }
+      }
+    }
+  }
+  .separator {
+    display: block;
+    margin: 5px auto;
+    width: 50%;
+    height: 1px;
+    border-top: rgba(0, 0, 0, 0.1) 1px solid;
+    border-bottom: $light-orange 1px solid;
+  }
+  ul.social_media {
+    padding-top: 10px;
+    li {
+      padding: 10px 15px 5px 15px;
+      span {
+        font-size: 0.7em;
+      }
+      i {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+.content {
+  margin-left: 41%;
+  width: 40%;
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
