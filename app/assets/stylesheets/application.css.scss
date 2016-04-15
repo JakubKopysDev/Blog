@@ -124,6 +124,16 @@ body {
         color: lighten(#FFBA64, 5%);
         text-shadow: none;
       }
+      -webkit-transition: background-color 0.3s ease;
+      -moz-transition: background-color 0.3s ease;
+      -o-transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease;
+      i, span {
+        -webkit-transition: color 0.3s ease;
+        -moz-transition: color 0.3s ease;
+        -o-transition: color 0.3s ease;
+        transition: color 0.3s ease;
+      }
       &:hover {
         background: lighten(#FFBA64, 5%);
         i, span{
@@ -195,5 +205,30 @@ body {
         }
       }
     }
+  }
+}
+.content {
+  .flash {
+    position: fixed;
+    top: 2%;
+    right: 30%;
+    width: 30%;
+    text-align: center;
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 10px 0;
+    text-shadow: none;
+  }
+  .info {
+    color: #9F6000;
+    background-color: #FEEFB3;
+  }
+  .danger {
+    color: #D8000C;
+    background-color: #FFBABA;
+  }
+  .success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
   }
 }

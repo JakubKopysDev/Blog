@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 before_action :find_post, only: [:show, :destroy, :edit, :update]
+before_filter :authorized?, only: [:new, :edit, :destroy, :update]
 
   def new
     @post = Post.new
@@ -49,5 +50,12 @@ before_action :find_post, only: [:show, :destroy, :edit, :update]
 
   def find_post
     @post = Post.where(id: params[:id]).last
+  end
+
+  def authorized?
+    unless logged_in?
+      redirect_to root_path
+      flash[:danger] = 'You need to be an admin to access this page.'
+    end
   end
 end

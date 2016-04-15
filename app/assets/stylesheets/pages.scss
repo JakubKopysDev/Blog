@@ -1,0 +1,45 @@
+$dark-orange: #9B2A00;
+$med-orange: #C63600;
+$light-orange: #FF6F39;
+$pale-orange: #FF8E64;
+
+.me {
+  padding-top: 20px;
+  h1.title {
+    margin: 0 0 10px;
+    padding: 15px 0;
+    font-size: 2em;
+    font-weight: 600;
+    color: $med-orange;
+    border-top: #EEE 2px solid;
+    border-bottom: #EEE 2px solid;
+    text-align: center;
+  }
+  .about_me {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    width: 95%;
+    padding: 24px;
+    margin: 1em auto 2em;
+    font-size: 1rem;
+    line-height: 2em;
+    color: darken(gray, 22%);
+    p.big {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: darken(gray, 30%);
+      padding: 20px 0 10px 0;
+    }
+    p.small {
+      padding: 10px 0;
+    }
+    .me_img {
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      border-radius: 5px;
+      padding-bottom: 20px;
+    }
+
+   }
+}

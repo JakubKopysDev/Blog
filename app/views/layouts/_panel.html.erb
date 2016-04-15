@@ -1,24 +1,24 @@
-<%= link_to '#' do %>
+<%= link_to 'me' do %>
   <%= image_tag  'rectscaledja.jpg', class: 'avatar' %>
 <% end %>
 
 <h1 class="name">Jakub Kopyś</h1>
 
 <ul class="links">
-  <li>
+  <li class="button">
     <%= link_to '#', class: 'link' do%>
       <%= fa_icon 'file 2x' %>
       <span class="label CV">CV</span>
     <% end %>
   </li>
-  <li>
-    <%= link_to posts_path do %>
+  <li class="button">
+    <%= link_to root_path do %>
         <%= fa_icon 'list 2x' %>
         <span class="label">Posts</span>
     <% end %>
   </li>
-  <li>
-    <%= link_to '#' do %>
+  <li class="button">
+    <%= link_to me_path do %>
         <%= fa_icon 'user 2x' %>
         <span class="label">Me</span>
     <% end %>
@@ -28,20 +28,20 @@
 <div class="separator"></div>
 
 <ul class="links social_media">
-  <li>
-    <%= link_to 'https://twitter.com/kublilonzo' do %>
+  <li class="button">
+    <%= link_to 'https://twitter.com/kublilonzo', target: '_blank' do %>
         <%= fa_icon 'twitter 1x' %>
         <span class="label small">Twitter</span>
     <% end %>
   </li>
-  <li>
-    <%= link_to 'https://www.facebook.com/kuba.kopys' do %>
+  <li class="button">
+    <%= link_to 'https://www.facebook.com/kuba.kopys', target: '_blank' do %>
       <%= fa_icon 'facebook-square 1x' %>
       <span class="label small">Facebook</span>
     <% end %>
   </li>
-  <li>
-    <%= link_to 'https://github.com/Jejkej' do %>
+  <li class="button">
+    <%= link_to 'https://github.com/Jejkej', target: '_blank' do %>
         <%= fa_icon 'github 1x' %>
         <span class="label small">Github</span>
     <% end %>
