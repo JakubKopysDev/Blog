@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   get 'sessions/new'
-  get 'me'      => 'pages#show'
+  get 'me'       => 'pages#show'
+  get 'download' => 'pages#download_pdf'
   root 'posts#index'
   resources :posts
   get 'login'   => 'sessions#new'
