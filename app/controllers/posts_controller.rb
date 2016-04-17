@@ -12,7 +12,7 @@ before_filter :authorized?, only: [:new, :edit, :destroy, :update]
       redirect_to @post
       flash[:success] = 'Post created.'
     else
-      flash[:danger] = 'Post invalid.'
+      flash.now[:danger] = 'Post invalid.'
       render 'new'
     end
   end
@@ -26,7 +26,7 @@ before_filter :authorized?, only: [:new, :edit, :destroy, :update]
   end
 
   def destroy
-    @post.delete
+    @post.destroy
     redirect_to posts_path
     flash[:notice] = 'Post deleted.'
   end
