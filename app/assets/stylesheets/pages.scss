@@ -32,6 +32,11 @@ $pale-orange: #FF8E64;
     }
     p.small {
       padding: 10px 0;
+      a {
+        color: $light-orange;
+        font-weight: 600;
+        text-decoration: none;
+      }
     }
     .me_img {
       text-align: center;
