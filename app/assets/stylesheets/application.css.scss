@@ -75,6 +75,9 @@ body {
   font-size: 100%;
   background-color: lighten(#f8f9f9, 2%);
   text-shadow: #fff 0px 1px 0px;
+  a {
+    outline: 0;
+  }
 }
 
 .side_panel, .controls {

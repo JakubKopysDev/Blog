@@ -1,0 +1,65 @@
+$dark-orange: #9B2A00;
+$med-orange: #C63600;
+$light-orange: #FF6F39;
+$pale-orange: #FF8E64;
+
+h2.toggle {
+  margin-bottom: 20px;
+  border-bottom: #EEE 2.5px solid;
+  font-weight: 600;
+  color: orangered;
+  font-size: 1.1rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.add_comment {
+  .field {
+    textarea {
+      width: 80%;
+      margin-top: 10px;
+      height: 80px;
+      color: #4d4d4d;
+      padding: 5px;
+    }
+    textfield {
+      color: #4d4d4d;
+      padding: 5px;
+
+    }
+  }
+  input[type='submit'] {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.comments {
+  ul#notice {
+    li {
+      text-align: center;
+      border: 1px solid;
+      margin: 10px 0px;
+      padding: 5px 0;
+      text-shadow: none;
+      color: #D8000C;
+      background-color: #FFBABA;
+    }
+  }
+  border-bottom: #EEE 2px solid;
+  padding-bottom: 40px;
+  color: darken(#4d4d4d, 10%);
+  .comment {
+    padding-bottom: 20px;
+    .name {
+      color: darken(#FFA939,10%);
+      font-weight: 600;
+    }
+  }
+  .authorized_links {
+    float: right;
+    a {
+      color: #B00038;
+    }
+  }
+}

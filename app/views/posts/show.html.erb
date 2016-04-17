@@ -3,3 +3,29 @@
   <h2 class="created_at"><%= @post.created_at.strftime("%d %b %Y") %></h2>
   <div class="post_content"><%= simple_format(@post.content) %></div>
 </div>
+
+<h2 class="toggle count"><%= pluralize(@post.comments.all.count, 'Comment') %> <small>(click to show)</small></h2>
+
+<div class="comments">
+
+ <ul id="notice"></ul>
+
+  <div class="add_comment">
+    <%= form_for [@post, Comment.new], remote: true do |f| %>
+
+        <div class="field">
+          <%= f.text_field :name, placeholder: 'Nick', class: 'nick_field' %>
+        </div>
+
+        <div class="field">
+          <%= f.text_area :content, placeholder: 'Your comment...', class: 'comment_field' %>
+        </div>
+
+        <%= f.submit 'Add Comment' %>
+    <% end %>
+  </div>
+
+  <div class="each_comment">
+      <%= render 'comments/comments', comments: @comments %>
+  </div>
+</div>

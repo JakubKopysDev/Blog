@@ -18,6 +18,7 @@ before_filter :authorized?, only: [:new, :edit, :destroy, :update]
   end
 
   def show
+    @comments = @post.comments.all.order('created_at DESC')
   end
 
   def index

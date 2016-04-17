@@ -1,0 +1,16 @@
+<% if @comment.errors.empty? %>
+  $('.each_comment').html("<%= escape_javascript(render 'comments/comments', comments: @comments) %>");
+  $('h2.toggle').html("<%= escape_javascript(pluralize(@post.comments.all.count, 'Comment')) %>")
+  $('.comment_field').val('');
+  $('.nick_field').val('');
+  $("ul#notice").html('');
+<% else %>
+  $("ul#notice").html('');
+  <% if @comment.errors.any? %>
+    <% @comment.errors.full_messages.each do |msg|  %>
+      $("ul#notice").append($("<li />").html("<%= msg.html_safe %>"));
+    <% end %>
+  <% end %>
+  $('.comment_field').val('');
+  $('.nick_field').val('');
+<% end %>

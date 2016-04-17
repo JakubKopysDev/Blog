@@ -14,6 +14,7 @@ gem 'font-awesome-rails', '~> 4.6', '>= 4.6.1.0'
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'heroku', '~> 3.42', '>= 3.42.50'
+gem 'jquery-turbolinks', '~> 2.1'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

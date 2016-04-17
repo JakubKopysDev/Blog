@@ -1,0 +1,10 @@
+<div class="comment comment_<%= comment.id %>">
+  <div class="name"><%= comment.name %></div>
+  <div class="text"><%= comment.content %></div>
+  <small class="date"><%= comment.created_at.strftime('%k:%M %d %b %Y') %></small>
+  <% if logged_in? %>
+    <div class="authorized_links">
+      <span class="delete"><%= link_to 'Delete', post_comment_path(comment.post, comment), method: :delete, data: { confirm: 'Are you sure?'} %></span>
+    </div>
+  <% end %>
+</div>

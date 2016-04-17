@@ -12,13 +12,23 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require turbolinks
 //= require ckeditor/init
 //= require_tree .
 
 
 $(document).ready(function(){
+
+    $(".comments").hide();
     setTimeout(function(){
         $('.flash').fadeOut();
     }, 5000);
+
+    $(".toggle").click(function(){
+        $(".comments").slideToggle();
+        $('html, body').animate({
+            scrollTop: 1000
+        }, 500);
+    });
 });
