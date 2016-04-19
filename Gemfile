@@ -23,6 +23,8 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.7'
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
   gem 'capybara', '~> 2.7'
+  gem 'guard-rspec'
+  gem 'launchy'
 end
 
 group :development do
@@ -33,5 +35,9 @@ end
 
 group :production do
   gem 'pg',             '0.17.1'
+end
+
+group :test do
+  gem 'database_cleaner'
 end
 
