@@ -20,6 +20,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   gem 'byebug',      '3.4.0'
   gem 'faker', '~> 1.6', '>= 1.6.3'
+  gem 'factory_girl_rails', '~> 4.7'
+  gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+  gem 'capybara', '~> 2.7'
 end
 
 group :development do
